@@ -1,5 +1,5 @@
 
-  # Bibliotecha
+  # Bibliotheca
 
   ![License](https://img.shields.io/badge/license-MITLicense-success?style=plastic&logo=appveyor)
 
