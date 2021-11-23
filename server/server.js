@@ -11,6 +11,16 @@ const { authMiddleware } = require('./utils/auth');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/bibliotheca',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  },
+);
+
 const server = new ApolloServer({
   typeDefs,
   resolvers,
