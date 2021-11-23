@@ -11,6 +11,7 @@ import {
 import Auth from "../utils/auth";
 import { searchGoogleBooks } from "../utils/API";
 import { saveBookIds, getSavedBookIds } from "../utils/localStorage";
+//imports from refactor
 import { SAVE_BOOK } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
 
@@ -29,6 +30,7 @@ const SearchBooks = () => {
     return () => saveBookIds(savedBookIds);
   });
 
+  //should work for savinga book, giving an error currently
   const [saveBook, { error }] = useMutation(SAVE_BOOK);
 
   // create method to search for books and set state on form submit
